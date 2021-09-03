@@ -22,14 +22,24 @@
     <p>Name: <input type="text"></p>
     <p>Password: <input type="password"></p>
 
+    <pre>&lt;p&gt;Name: &lt;input type="text"&gt;&lt;/p&gt;</pre>
+    <pre>&lt;p&gt;Password: &lt;input type="password"&gt;&lt;/p&gt;</pre>
+
     <br>
     <label>Select a date <input type="date"></label>
+
+    <pre>&lt;label&gt;Select a date &lt;input type="date"&gt;&lt;/label&gt;</pre>
 
     <br>
     <br>
     <div><label>option 1 <input type="radio" name="options"></label></div>
     <div><label>option 2 <input type="radio" name="options"></label></div>
     <div><label>option 3 <input type="radio" name="options"></label></div>
+
+    <pre>&lt;div&gt;&lt;label&gt;option 1 &lt;input type="radio" name="options"&gt;&lt;/label&gt;&lt;/div&gt;
+&lt;div&gt;&lt;label&gt;option 2 &lt;input type="radio" name="options"&gt;&lt;/label&gt;&lt;/div&gt;
+&lt;div&gt;&lt;label&gt;option 3 &lt;input type="radio" name="options"&gt;&lt;/label&gt;&lt;/div&gt;
+    </pre>
 
     <br>
     Which option is best?
@@ -38,6 +48,14 @@
       <option>Base 10</option>
       <option>Base 12</option>
     </select>
+
+    
+    <pre>Which option is best?
+&lt;select&gt;
+  &lt;option&gt;Pick one...&lt;/option&gt;
+  &lt;option&gt;Base 10&lt;/option&gt;
+  &lt;option&gt;Base 12&lt;/option&gt;
+&lt;/select&gt;</pre>
 
     <p style="font-size:20px;">
       In the interest of further exploring form elements, I also found a page about on <a target="_blank"
@@ -61,6 +79,23 @@
       <div><label for="area">Type anything you want. (You can expand the box if necessary)</label></div>
       <div><textarea id="area" rows="12" cols="80"></textarea></div>
     </fieldset>
+
+    &lt;&gt;
+    <pre>&lt;fieldset&gt;
+  &lt;legend&gt;Input Fields&lt;/legend&gt;
+  &lt;p&gt;Name: &lt;input type="text"&gt;&lt;/p&gt;
+  &lt;p&gt;Password: &lt;input type="password"&gt;&lt;/p&gt;
+
+  &lt;div&gt;
+  &lt;button style="height: 60px; width: 20%;" type="button" onclick="alert('You hit the button!')"&gt;
+    Click Me!
+  &lt;/button&gt;
+  &lt;/div&gt;
+    
+  &lt;div&gt;&lt;label for="area"&gt;Type anything you want. (You can expand the box if necessary)&lt;/label&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;textarea id="area" rows="12" cols="80"&gt;&lt;/textarea&gt;&lt;/div&gt;
+&lt;/fieldset&gt;
+    </pre>
 
     <br>
     <br>
