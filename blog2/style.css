@@ -1,0 +1,73 @@
+:root {
+  --bg-color: rgb(127, 70, 165);
+
+  background-color: var(--bg-color)
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  min-height: 90vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background: var(--bg-color);
+
+}
+
+h1 {
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  position: relative;
+  font-family: "Source Code Pro", monospace;
+  position: relative;
+  width: max-content;
+}
+
+h1::before, h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+h1::before {
+  background-color: var(--bg-color);
+  animation: typewriter 5s steps(25) 2s forwards;
+}
+
+h1::after {
+  width: 0.1em;
+  background: black;
+
+  animation:
+  typewriter 5s steps(25) 2s forwards,
+  blink 700ms steps(25) infinite;
+}
+
+@keyframes typewriter {
+  to { left: 100% }
+}
+
+@keyframes blink {
+
+  0% {
+  opactiy: 100;
+  }
+  49% { opacity: 100}
+
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+
+}
+
+#subtitle {
+  color: rgb(68, 59, 59);
+  font-size: 2rem;
+  font-weight: 400;
+}
