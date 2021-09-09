@@ -17,10 +17,11 @@ body {
 
 h1 {
   font-size: clamp(1rem, 3vw + 1rem, 4rem);
-  position: relative;
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Courier New', Courier, monospace;
   position: relative;
   width: max-content;
+
+  font-weight: normal;
 }
 
 h1::before, h1::after {
@@ -38,12 +39,12 @@ h1::before {
 }
 
 h1::after {
-  width: 0.1em;
+  width: 0.05em;
   background: black;
 
   animation:
   typewriter 5s steps(25) 2s forwards,
-  blink 700ms steps(25) infinite;
+  blink 1000ms steps(25) infinite;
 }
 
 @keyframes typewriter {
