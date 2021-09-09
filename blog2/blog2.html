@@ -3,19 +3,78 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>Type Writer</title>
+    <title>Blog 2</title>
 
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-    <h1>
-      Hello, my name is Elijah.
-    </h1>
+
+    <h1>Blog 2</h1>
+    <h2>Animations</h2>
+
+    <div class="example">
+      <div class="text">
+        Hello, my name is Elijah.
+      </div class="text">
+    </div>
 
     <a target="_blank" href="https://www.youtube.com/watch?v=w1nhwUGsG6M&t=159s" id="subtitle">
       Tutorial
     </a>
+
+    <p>This week I found a Youtube video by Kevin Powell on creating a typewriter animation. This involved learning
+      features like "::before", "::after", "@keyframes". ::before and ::after are pseudo-elements that lie before and
+      after the element its attached to. @keyframes essentially defines one or many moments in an animation. When you
+      call it with animation:, the moments in between are filled in gradually.</p>
+
+    <pre>
+@keyframes typewriter {
+  to { left: 100% }
+}
+    </pre>
+
+    <p>This keyframe will move the left edge of the attribute 100% to the right.</p>
+
+    <pre>
+@keyframes blink {
+
+  0% { opactiy: 100; }
+  49.9% { opacity: 100}
+
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+
+}
+    </pre>
+
+    <p>This keyframe is for making the cursor blink. Since keyframes are filled in gradually when animated, I had to
+      define that no change should happen between 0-49% and 50-100%.</p>
+
+    <pre>
+.text::before {
+  background-color: tan;
+  animation: typewriter 5s steps(25) 2s forwards;
+}
+    </pre>
+
+    <p>This creates a ::before pseudo-element before (to the left of) the text being animated. In a different area, I
+      stretched this element to be the width of the text. The color is tan matching the background color, thus making
+      the text "invisible". Here, the animation calls typewriter, waits 2 seconds, steps through the animation 25 steps
+      (the length of the text), and lasts 5 seconds.</p>
+
+    <pre>
+.text::after {
+  width: 0.05em;
+  background: black;
+    
+  animation:
+    typewriter 5s steps(25) 2s forwards,
+    blink 1000ms steps(25) infinite;
+}
+    </pre>
+
+    <p>This ::after element is made thin and black to resemble a cursor.  the animation calls both @keyframes. typewriter makes the cursor move with the tan block making it appear as if the text comes from the cursor. blink helps resemble a real cursor constantly blinking.</p>
 
   </body>
 

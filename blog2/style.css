@@ -1,7 +1,7 @@
 :root {
   --bg-color: rgb(127, 70, 165);
 
-  background-color: var(--bg-color)
+    background: rgb(218, 235, 245);
 }
 
 body {
@@ -11,20 +11,57 @@ body {
   display: grid;
   place-content: center;
   text-align: center;
-  background: var(--bg-color);
+}
+
+p {
+  text-align: left;
+  margin-top: 50px;
+  margin-left: 80px;
+  margin-right: 80px;
+
+  font-size: 1.5em;
+}
+
+pre {
+  text-align: left;
+  margin-left: 150px;
+  font-size: 1.2em;
 
 }
 
-h1 {
-  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+.example {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  position: relative;
+
+  /*Centers in blog*/
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 40em;
+  
+  border: solid black;
+  border-width: 3px;
+  border-radius: 15px;
+
+  background-color: tan;
+}
+
+.text {
+  font-size: 2em;
   font-family: 'Courier New', Courier, monospace;
+  font-weight: normal;
+
+  margin: 50px;
+
   position: relative;
   width: max-content;
 
-  font-weight: normal;
+  background-color: tan;
 }
 
-h1::before, h1::after {
+.text::before, .text::after {
   content: "";
   position: absolute;
   top: 0;
@@ -33,18 +70,18 @@ h1::before, h1::after {
   right: 0;
 }
 
-h1::before {
-  background-color: var(--bg-color);
+.text::before {
+  background-color: tan;
   animation: typewriter 5s steps(25) 2s forwards;
 }
 
-h1::after {
+.text::after {
   width: 0.05em;
   background: black;
 
   animation:
-  typewriter 5s steps(25) 2s forwards,
-  blink 1000ms steps(25) infinite;
+    typewriter 5s steps(25) 2s forwards,
+    blink 1000ms steps(25) infinite;
 }
 
 @keyframes typewriter {
@@ -53,22 +90,16 @@ h1::after {
 
 @keyframes blink {
 
-  0% {
-  opactiy: 100;
-  }
-  49% { opacity: 100}
+  0% { opactiy: 100; }
+  49.9% { opacity: 100}
 
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
 
 }
 
 #subtitle {
-  color: rgb(68, 59, 59);
+  color: rgb(173, 158, 149);
   font-size: 2rem;
   font-weight: 400;
 }
