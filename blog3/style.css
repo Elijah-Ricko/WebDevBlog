@@ -1,6 +1,8 @@
 body {
   margin: 0;
 
+  background-color: rgb(218, 204, 230);
+
   --purple: rgb(69, 0, 132);
   --gold: rgb(203, 182, 119);
   --dark_gold: rgb(173, 156, 101);
@@ -37,8 +39,6 @@ body {
   padding: 0;
   margin: 0;
   
-  /* padding-right: 80px; */
-
   background-color: var(--gold);
 }
 
@@ -55,14 +55,8 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
 
-  background-color: var(--gold);
   color: var(--purple);
 }
-
-.navlink > a:hover {
-  background-color: var(--dark_gold);
-}
-
 
 
 .dropdown-content {
@@ -91,6 +85,7 @@ body {
 
 }
 
+.navlink > a:hover, 
 .dropdown-content > a:hover {
   background-color: var(--dark_gold);
 }
@@ -101,4 +96,31 @@ body {
 
 #dropdown:hover .dropbtn {
   background-color: var(--dark_gold);
+}
+
+
+/*for the page content*/
+
+main {
+  margin: 60px;
+  margin-top: 0px;
+
+  font-size: 20px;
+}
+
+pre {
+  display: inline-block;
+  font-size: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.pres {
+  display: flex;
+  justify-content: center;
+}
+
+#hovers {
+  display: flex;
+  justify-content: center;
 }
