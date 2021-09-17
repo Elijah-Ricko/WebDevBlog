@@ -1,35 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Blog 3</title>
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Blog 3</title>
 
-  <div class="title">Blog 3</div>
-  <nav>
-    <ul class="navlinks">
-      <li class="navlink">
-        <a href="https://www.w3schools.com/css/css_dropdowns.asp" target="_blank">Tutorial</a>
-      </li>
-      <li class="navlink" id="dropdown">
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-        <a href="http://blog.rickoes.me" class="dropbtn">Other Blogs</a>
+  <body>
 
-        <div class="dropdown-content">
-          <a href="http://blog.rickoes.me/blog1/blog1.html" target="_blank">Blog 1</a>
-          <a href="http://blog.rickoes.me/blog2/blog2.html" target="_blank">Blog 2</a>
-          <a href="http://blog.rickoes.me/blog3/blog3.html" target="_blank">Blog 3</a>
-        </div>
+    <div class="title">Blog 3</div>
+    <nav>
+      <ul class="navlinks">
+        <li class="navlink">
+          <a href="https://www.w3schools.com/css/css_dropdowns.asp" target="_blank">Tutorial</a>
+        </li>
+        <li class="navlink" id="dropdown">
 
-      </li>
-      <li class="navlink">
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">other</a>
-      </li>
-    </ul>
-  </nav>
+          <a href="http://blog.rickoes.me" class="dropbtn">Other Blogs</a>
+
+          <div class="dropdown-content">
+            <a href="http://blog.rickoes.me/blog1/blog1.html" target="_blank">Blog 1</a>
+            <a href="http://blog.rickoes.me/blog2/blog2.html" target="_blank">Blog 2</a>
+            <a href="http://blog.rickoes.me/blog3/blog3.html" target="_blank">Blog 3</a>
+          </div>
+
+        </li>
+        <li class="navlink">
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">other</a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <main>
+
+      <p>This blog post is building off of the navlinks reading from this week. The navlinks made it possible for me to
+        build the menu bar above. What I learned on my own was how to create the drop down menu for the link "Other
+        Blogs". The implementation of this drop down menu was done using :hover like used in Blog 2, but this time,
+        changing a different element than the one hovered over.</p>
+
+      <div class="pres">
+        <pre>
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--gold);
+    .
+    .
+    .
+  }
+        </pre>
+        <pre>
+  .dropdown-content > a {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: var(--purple);
+    .
+    .
+    .
+  }
+        </pre>
+      </div>
+
+      <pre id="hovers">
+  .navlink > a:hover,
+  .dropdown-content > a:hover {
+    background-color: var(--dark_gold);
+  }
   
-</body>
+  #dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  #dropdown:hover .dropbtn {
+    background-color: var(--dark_gold);
+  }
+      </pre>
+
+      <p>The first two declaration blocks style the dropdown menu's container and the menu items themselves repectively. The container is initially set to none so that it will be visible only when hovered on. The menu items are anchors and are set to display as block items rather than plain text.</p>
+
+      <p>The three hover selectors determine what happens as each element is hovered over.  What's new this week is having the act of hovering on one element allow you to alter a different element. You see that in the 2nd hover selector. As the user hovers on the drop down menu button, the dropdown content's display is changed to "block". This creates the look we are looking for. The 3rd hover selector is keeping the menu button highlighted as we hover in the drop down menu.</p>
+
+    </main>
+
+
+  </body>
+
 </html>
