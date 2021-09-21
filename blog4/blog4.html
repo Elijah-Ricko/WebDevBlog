@@ -12,9 +12,13 @@
 
     <h1>Blog 4</h1>
 
-    <div class="scene">
-
-      <div class="floor"></div>
+    <p>
+      For this week, I followed the tutorial found 
+      <a href="https://www.youtube.com/watch?v=NdftnCDwKaU&t=1847s">
+        Here
+      </a> 
+      on how to create both a 3D object AND how to animate it. This makes use of @keyframes and "animation" which were used in a previous blog with the addition of "transform", "transform-style", "perspective", and "perspective-origin".  
+    </p>
 
       <div class="cube">
         <div class="front"></div>
@@ -25,7 +29,46 @@
         <div class="bottom"></div>
       </div>
 
-    </div>
+      <div class="pres">
+        <pre>
+        .front {
+          transform: translateZ(1em);
+        }
+        </pre>
+
+        <pre>
+        .back {
+          transform: translateZ(-1em);
+        }
+        </pre>
+        
+        <pre>
+        .left {
+          transform: rotateY(90deg) translateZ(-1em);
+        }
+        </pre>
+        
+        <pre>
+        .right {
+          transform: rotateY(90deg) translateZ(1em);
+        }
+        </pre>
+        
+        <pre>
+        .top {
+          transform: rotateX(90deg) translateZ(1em);
+        }
+        </pre>
+        
+        <pre>
+        .bottom {
+          transform: rotateX(90deg) translateZ(-1em);
+        }
+        </pre>
+
+      </div>
+
+      <p>Before the selectors above, 6 div's are created inside a container "cube".  Now, each of those attributes are transformed so that they simulate a cube. If only these transormations happen, it will not look right because by default, "transform-style" is set to "flat".  Therefore, any 3D motion is not noticed.  By setting it to "preserve-3d", we see the changed we made correctly.</p>
 
   </body>
 
