@@ -7,13 +7,14 @@ body {
   position: relative;
   min-height: 100vh;
 
-  margin: 60px;
+  margin: 100px;
+  margin-top: 10px;
 
   font-size: 75px;
   background-color: gray;
 
   perspective: 10em;
-  perspective-origin: 50% calc(50% - 3em);
+  perspective-origin: 50% calc(40% - 3em);
 }
 
 h1 {
@@ -37,8 +38,11 @@ p {
 
 pre {
   position: relative;
+
   font-size: 15px;
   margin: 20px;
+
+  text-align: left;
 }
 
 .cube {

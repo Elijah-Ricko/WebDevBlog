@@ -13,62 +13,95 @@
     <h1>Blog 4</h1>
 
     <p>
-      For this week, I followed the tutorial found 
-      <a href="https://www.youtube.com/watch?v=NdftnCDwKaU&t=1847s">
+      For this week, I followed the tutorial found
+      <a href="https://www.youtube.com/watch?v=NdftnCDwKaU&t=1847s" target="_blank">
         Here
-      </a> 
-      on how to create both a 3D object AND how to animate it. This makes use of @keyframes and "animation" which were used in a previous blog with the addition of "transform", "transform-style", "perspective", and "perspective-origin".  
+      </a>
+      on how to create both a 3D object AND how to animate it. This makes use of @keyframes and "animation" which were
+      used in a previous blog with the addition of "transform", "transform-style", "perspective", and
+      "perspective-origin".
     </p>
 
-      <div class="cube">
-        <div class="front"></div>
-        <div class="back"></div>
-        <div class="left"></div>
-        <div class="right"></div>
-        <div class="top"></div>
-        <div class="bottom"></div>
-      </div>
+    <div class="cube">
+      <div class="front"></div>
+      <div class="back"></div>
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="top"></div>
+      <div class="bottom"></div>
+    </div>
 
-      <div class="pres">
-        <pre>
+    <div class="pres">
+      <pre>
         .front {
           transform: translateZ(1em);
         }
         </pre>
 
-        <pre>
+      <pre>
         .back {
           transform: translateZ(-1em);
         }
         </pre>
-        
-        <pre>
+
+      <pre>
         .left {
           transform: rotateY(90deg) translateZ(-1em);
         }
         </pre>
-        
-        <pre>
+
+      <pre>
         .right {
           transform: rotateY(90deg) translateZ(1em);
         }
         </pre>
-        
-        <pre>
+
+      <pre>
         .top {
           transform: rotateX(90deg) translateZ(1em);
         }
         </pre>
-        
-        <pre>
+
+      <pre>
         .bottom {
           transform: rotateX(90deg) translateZ(-1em);
         }
         </pre>
 
-      </div>
+    </div>
 
-      <p>Before the selectors above, 6 div's are created inside a container "cube".  Now, each of those attributes are transformed so that they simulate a cube. If only these transormations happen, it will not look right because by default, "transform-style" is set to "flat".  Therefore, any 3D motion is not noticed.  By setting it to "preserve-3d", we see the changed we made correctly.</p>
+    <p>Before the selectors above, 6 div's are created inside a container "cube". Now, each of those attributes are
+      transformed so that they simulate a cube. If only these transormations happen, it will not look right because by
+      default, "transform-style" is set to "flat". Therefore, any 3D motion is not noticed. By setting it to
+      "preserve-3d", we see the changed we made correctly.</p>
+
+    <div class="pres">
+      <pre>
+      .cube {
+        position: relative;
+        
+        width: 2em;
+        height: 2em;
+        
+        top: 1em;
+        margin: auto;
+        margin-bottom: 200px;
+        
+        transform-style: preserve-3d;
+        animation: cubeRotate 5s infinite linear;
+        
+      }
+      </pre>
+
+      <pre>
+      @keyframes cubeRotate {
+        to { transform: rotateY(360deg); }
+      }
+      </pre>
+    </div>
+
+    <p>Here you can see transform-style being set. You can also see the animation being set to spin the cube infinitely. Not much more complicated than animating a 2d plain, but it definitely added some new challenges.
+    </p>
 
   </body>
 
