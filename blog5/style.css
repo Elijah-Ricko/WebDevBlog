@@ -3,6 +3,15 @@
   background-color: #317f91;
 }
 
+body {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
 h1 {
   display: flex;
 
@@ -22,10 +31,10 @@ h1 {
 }
 
 .clock {
-    position: absolute;
+    /* position: absolute;
     top: 30%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); */
     color: #83cada;
     font-size: 60px;
     letter-spacing: 7px;
