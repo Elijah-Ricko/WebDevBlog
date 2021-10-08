@@ -1,0 +1,33 @@
+:root {
+  /* background-color: #f0f0f2; */
+  background-color: #317f91;
+}
+
+h1 {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 3em;
+
+  height: 2.5em;
+  width: 5em;
+
+  margin: 1em auto;
+
+  background-color: white;
+  border-radius: 12px;
+}
+
+.clock {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #83cada;
+    font-size: 60px;
+    letter-spacing: 7px;
+   
+}
