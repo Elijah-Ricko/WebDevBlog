@@ -16,5 +16,25 @@
 
   <script src="script.js"></script>
 
+  <p>This blog post is showing a way to use timeouts as a recursive call. This is also using an object called Date(). Using setTimeout(), the function being sent to it is actually the function that it is in. So basically, it's a delayed recursive call. By setting the time to 1000, it refreshes the time every second like a clock.</p>
+
+  <pre>
+  function showTime() {
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    .
+    .
+    .
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    
+    setTimeout(showTime, 1000);
+  }
+  </pre>
+
+  <p>This is a very simple but really fun way to create a clock. It's not too complicated and is very similar to how it could be done in other languages.</p>
+
 </body>
 </html>
