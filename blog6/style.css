@@ -11,6 +11,7 @@ body {
   background-color: #83cada;
 
   margin: auto 10em;
+  margin-bottom: 5em;
 
 }
 
@@ -67,5 +68,9 @@ p {
 }
 
 pre {
+  font-size: 1.5em;
+}
+
+a {
   font-size: 1.5em;
 }
