@@ -1,0 +1,71 @@
+body {
+  /* background-color:black; */
+  font-family: Signika Negative, Asap, sans-serif;
+
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #83cada;
+
+  margin: auto 10em;
+
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+#container {
+  height: 10em; 
+  /* overflow: visible;  */
+  padding: 0; 
+  position: relative;
+}
+
+.box {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  background-color: #e69d00;
+  position: absolute;
+
+  width: 13em;
+  height: 6em;
+  border-radius: 0.7em;
+
+  left: -14em;
+
+  color: black;
+  font-family: Asap, Avenir, Arial, sans-serif;
+  
+}
+
+#box2 {
+  background-color: red;
+
+  left: 1em;
+}
+
+.box:hover {
+  cursor: grab;
+}
+
+.two_funcs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+p {
+  font-size: 1.7em;
+}
+
+pre {
+  font-size: 1.5em;
+}
