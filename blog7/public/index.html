@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="style.css">
+    <title>Blog 7</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <div class="header">
+      <h1>Blog 7</h1>
+    </div>
+
+    <p>In this blog, I attempted to have images of lily pads display all around the screen in random locations. I achieved it, but since I'm using React, I'm currently unsure as to how to make it appear in the html file. All of my React files I made to achieve are pushed though. So, here I'll explain it how I normally would.</p>
+
+    <p>In this blog, I further worked on what we learned in class. I created a component called 'Pad' that is one instance of the many lily pads floating around the sreen. One new thing I added to this is that every time you refresh the page, the lily pads change location on the screen. Below I will provide the code snippets that made this possible.</p>
+
+    <pre>          
+      import image from './lily-pad.png';
+      import React, {useRef} from 'react';
+    
+        export function Pad() {
+    
+          const styles = useRef({
+            position: 'absolute',
+            top: Math.floor(Math.random() * 600),
+            left: Math.floor(Math.random() * 1300),
+          });
+    
+          return (
+            &ltimg src={image} className="image" alt="lily pad"
+              width="150" height="auto" style={styles.current} /&gt
+          );
+    
+        }    
+    </pre>
+
+    <p>The extent of figuring out how to do this was learned from
+        <a href="https://stackoverflow.com/questions/63525812/react-random-position-every-time-the-same-picture-renders" target="_blank">Here</a>.
+      </p>
+
+      <p>I also figured out how to use 'pre' from 
+        <a href="https://dev.to/gustavohst/how-can-i-use-pre-tag-in-react-js-355g" target="_blank">Here</a>
+      </p>
+
+      <script src="../src/App.js"></script>
+    
+  </body>
+</html>

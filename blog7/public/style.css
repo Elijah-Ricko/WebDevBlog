@@ -1,0 +1,35 @@
+:root {
+  background-color: #008080;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  width: 45%; 
+
+  box-shadow: 1px 1px grey;
+
+  border: 2px solid grey; 
+  border-radius: 5px;
+
+  padding-left: 10px;
+  margin: auto;
+  margin-top: 2em;
+
+  cursor: pointer;
+
+  color: black;
+  background-color: #09bdbd;
+}
+
+p {
+  color: #09bdbd;
+  font-size: 1.5em;
+  margin: 2em 3em;
+}
+
+pre {
+  margin-left: 40%;
+}
