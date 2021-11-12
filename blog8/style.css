@@ -1,0 +1,69 @@
+
+
+:root {
+  --width: 2em;
+  --height: 2em;
+  --bounce_height: 4em;
+
+  background-color: teal;
+
+}
+
+h1 {
+  font-size: 3.2em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+body {
+  position: relative; 
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 4em;
+}
+
+
+.bounceball {
+  position: relative;
+  display: inline-block;
+  height: 37px;
+  width: var(--width);
+}
+
+.bounceball:before {
+    position: relative;
+    content: '';
+    display: block;
+    top: 0;
+    width: var(--width);
+    height: var(--height);
+    border-radius: 50%;
+    background-color: #fbae17;
+    transform-origin: 50%;
+    animation: bounce 500ms alternate infinite ease;
+  }
+
+@keyframes bounce {
+  0% {
+    top: var(--bounce_height);
+    height: 5px;
+    border-radius: 60px 60px 20px 20px;
+    transform: scaleX(2);
+  }
+  35% {
+    height: var(--height);
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+
