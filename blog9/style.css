@@ -19,3 +19,7 @@ p {
   align-self: flex-start;
   font-size: 1.3em;
 }
+
+a {
+  font-size: 1.2em;
+}
