@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Blog 9</title>
+</head>
+<body>
+
+  <h1>Blog 9</h1>
+
+  <p>For this blog, I'll be focuing on getting a better understanding of faking pages with React. Specifically, I'll be focusing on making buttons link to "other pages". So, this will be using the button's OnClick() function and react-router-dom's navigate().</p>
+
+  <p>First, in App.js, you need to use react-router-dom's Routes and Route. a Route essentially is a linkable Component that goes to a pseudo-path. So, instead of needing a path to an html file, this path leads to a specific Component.</p>
+
+  <pre>
+    &lt;Routes&gt;
+      &lt;Route path="" element={&lt;Home /&gt;} /&gt;
+      &lt;Route path="/page1" element={&lt;Page1 /&gt;} /&gt;
+      &lt;Route path="/page2" element={&lt;Page2 /&gt;} /&gt;
+    &lt;/Routes>
+  </pre>
+
+  <p>A fun thing I found with this you can see is to create a home page, the path is "". It's pretty obvious but I thought it was fun. Next in the Home component, I have two buttons that, when clicked, take you to Page1 or Page2 respectively.</p>
+
+  <pre>
+    &lt;button onClick={()=> { navigate(`/page1/`); }}&gt;
+      Page 1
+    &lt;/button>
+    
+    &lt;button onClick={()=> { navigate(`/page2/`); }}&gt;
+      Page 2
+    &lt;/button&gt;
+  </pre>
+
+  <p>navigate(), working with Route, essentially create links to another "page". When navigate() changes the path, the Route defined with that path then jumps to the content in element specified (Page1 or Page2).</p>
+  
+</body>
+</html>
