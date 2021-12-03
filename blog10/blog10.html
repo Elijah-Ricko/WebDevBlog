@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Blog 10</title>
+  </head>
+
+  <body>
+
+    <h1>Blog 10</h1>
+
+    <p>For this blog, I'll be focuing on getting a better understanding of using multiple dispatches. As I'm going through project3, I found myself needing more to be done at a given point. For my needs, I wanted to display a message to the user dependent on if the a fetch call was successful or not. AND if it was successful, I wanted to change the state of some data in the global store. Below, I'll show what I came up with.</p>
+
+    <pre>
+    if (data.ok) {
+      dispatch(updateID({
+        ...expense,
+        id: id,
+      }));
+    
+      dispatch(changeMessage("Successful"));
+    
+    } else {
+      dispatch(changeMessage("Invalid"));
+    }
+  </pre>
+
+    <p>This is nothing too complicated, but I did not have this initial understanding of dispatch's usability. I will be doing a few more things like this when I implement asynchronous activity as well.</p>
+
+
+
+  </body>
+
+</html>
