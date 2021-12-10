@@ -1,0 +1,25 @@
+:root {
+  background-color: rgb(35, 197, 197);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 5em 5em 5em;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+p {
+  align-self: flex-start;
+  font-size: 1.3em;
+}
+
+a {
+  font-size: 2em;
+}
